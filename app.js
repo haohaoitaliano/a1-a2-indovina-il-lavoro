@@ -269,6 +269,16 @@ function renderFinish() {
     <h2>你完成了第3课职业词汇练习！</h2>
     <p>Hai finito! 你已经复习了职业名称、阴阳性变化和常见工作地点。</p>
     <div class="recap"><span>职业名称</span><span>阴阳性</span><span>工作地点</span></div>
+    <section class="reading-practice" aria-labelledby="reading-title">
+      <h3 id="reading-title">Leggi ad alta voce! 📖</h3>
+      <p class="reading-practice__intro">请大声朗读下面的4组句子，练习用意大利语介绍不同的职业。可以多读几遍哦！</p>
+      <ol>
+        <li>Anna ha un'azienda. Anna è un'imprenditrice.</li>
+        <li>Giulio lavora in una fabbrica. Fa i vestiti. Giulio è un operaio.</li>
+        <li>Maria lavora in un negozio di abbigliamento. Maria è una commessa.</li>
+        <li>Luca lavora in un ristorante. Cucina tutti i giorni. Luca è un cuoco.</li>
+      </ol>
+    </section>
     <button class="button button--primary" type="button" id="restart-all">Ricomincia tutto · 再做一次</button>
   </div>`;
   panel.querySelector("#restart-all").addEventListener("click", () => {
