@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#fff8ed" />
+    <meta
+      name="description"
+      content="Un piccolo gioco A1–A2 per ripassare i lavori e i luoghi di lavoro."
+    />
+    <title>Indovina il lavoro!</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#exercise">Vai all’esercizio</a>
+    <header class="hero">
+      <div class="hero__content">
+        <div class="hero__eyebrow">LEZIONE 3 · A1–A2</div>
+        <h1>Indovina il lavoro!</h1>
+        <p class="hero__subtitle">猜猜是什么职业！</p>
+        <p class="hero__intro">Un piccolo gioco per ripassare lavori e luoghi di lavoro.</p>
+      </div>
+      <div class="hero__scene" aria-hidden="true">
+        <span>👩‍🍳</span><span>🧑‍🏫</span><span>👨‍⚕️</span>
+      </div>
+    </header>
+
+    <main id="exercise" class="app-shell">
+      <nav class="steps" aria-label="Parti dell’esercizio">
+        <button class="step is-active" type="button" data-step="0" aria-current="step">
+          <span class="step__number">1</span><span class="step__label">Il lavoro</span>
+        </button>
+        <span class="steps__line" aria-hidden="true"></span>
+        <button class="step" type="button" data-step="1" disabled>
+          <span class="step__number">2</span><span class="step__label">Il luogo</span>
+        </button>
+        <span class="steps__line" aria-hidden="true"></span>
+        <button class="step" type="button" data-step="2" disabled>
+          <span class="step__number">3</span><span class="step__label">Completa</span>
+        </button>
+      </nav>
+
+      <div id="live-region" class="sr-only" aria-live="polite"></div>
+      <section id="quiz-panel" class="quiz-panel" aria-live="off"></section>
+    </main>
+
+    <footer>Fatto per imparare, provare e riprovare 🌱</footer>
+  </body>
+</html>

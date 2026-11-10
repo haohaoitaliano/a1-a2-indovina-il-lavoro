@@ -1,2 +1,11 @@
-# a1-a2-indovina-il-lavoro
-A1–A2 第3课｜职业与工作地点互动练习
+# Indovina il lavoro!
+
+A dependency-free, mobile-friendly A1–A2 Italian vocabulary exercise about jobs and workplaces.
+
+## Run locally
+
+Open `index.html` directly, or serve the folder with any static HTTP server.
+
+## Deploy
+
+The repository is ready for GitHub Pages: publish the root of the default branch.
