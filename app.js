@@ -6,16 +6,16 @@ const parts = [
     type: "choice",
     illustrated: true,
     questions: [
-      { prompt: "Anna ha un’azienda.\nQuindi è...", options: ["un’infermiera", "un’imprenditrice", "una commessa"], answer: 1, job: "imprenditrice", tip: "imprenditore = 男企业家 / imprenditrice = 女企业家", prop: "briefcase", color: "#fbe9c8" },
-      { prompt: "Giulio lavora in una fabbrica.\nFa i vestiti. Quindi è...", options: ["un operaio", "un impiegato", "un commerciante"], answer: 0, job: "operaio", tip: "operaio = 男工人 / operaia = 女工人", prop: "gear", color: "#dfeee9" },
-      { prompt: "Maria lavora in un negozio di abbigliamento.\nQuindi è...", options: ["una commessa", "una parrucchiera", "un’insegnante"], answer: 0, job: "commessa", tip: "commesso = 男店员 / commessa = 女店员", prop: "shirt", color: "#f8e1e4" },
-      { prompt: "Luca lavora in un ristorante.\nCucina tutti i giorni. Quindi è...", options: ["un cameriere", "un cuoco", "un infermiere"], answer: 1, job: "cuoco", tip: "cuoco = 男厨师 / cuoca = 女厨师", prop: "pan", color: "#e6ecfa" },
-      { prompt: "Sofia lavora in un salone di parrucchiere.\nQuindi è...", options: ["una parrucchiera", "un’estetista", "una commessa"], answer: 0, job: "parrucchiera", tip: "parrucchiere = 男理发师 / parrucchiera = 女理发师", prop: "scissors", color: "#efe2f5" },
-      { prompt: "Marco lavora in un ospedale.\nAiuta i pazienti. Quindi è...", options: ["un infermiere", "un impiegato", "un cuoco"], answer: 0, job: "infermiere", tip: "infermiere = 男护士 / infermiera = 女护士", prop: "cross", color: "#dff1ed" },
-      { prompt: "Laura lavora in una scuola.\nInsegna italiano. Quindi è...", options: ["una studentessa", "un’insegnante", "una cameriera"], answer: 1, job: "insegnante", tip: "insegnante 可指男老师或女老师", prop: "book", color: "#fff0c9" },
-      { prompt: "Paolo lavora in ufficio.\nQuindi è...", options: ["un impiegato", "un operaio", "un parrucchiere"], answer: 0, job: "impiegato", tip: "impiegato = 男职员 / impiegata = 女职员", prop: "laptop", color: "#dfe9f5" },
-      { prompt: "Chiara lavora in un centro estetico.\nQuindi è...", options: ["un’infermiera", "un’estetista", "una cuoca"], answer: 1, job: "estetista", tip: "estetista 可指男美容师或女美容师", prop: "bottle", color: "#f9e1ea" },
-      { prompt: "Davide lavora in un bar.\nPorta da bere ai clienti. Quindi è...", options: ["un cameriere", "un insegnante", "un operaio"], answer: 0, job: "cameriere", tip: "cameriere = 男服务员 / cameriera = 女服务员", prop: "tray", color: "#e2f0de" }
+      { prompt: "Anna ha un’azienda.\nQuindi è...", options: ["un’infermiera", "un’imprenditrice", "una commessa"], answer: 1, job: "imprenditrice", character: "woman", tip: "imprenditore = 男企业家 / imprenditrice = 女企业家", prop: "briefcase", color: "#fbe9c8" },
+      { prompt: "Giulio lavora in una fabbrica.\nFa i vestiti. Quindi è...", options: ["un operaio", "un impiegato", "un commerciante"], answer: 0, job: "operaio", character: "man", tip: "operaio = 男工人 / operaia = 女工人", prop: "gear", color: "#dfeee9" },
+      { prompt: "Maria lavora in un negozio di abbigliamento.\nQuindi è...", options: ["una commessa", "una parrucchiera", "un’insegnante"], answer: 0, job: "commessa", character: "woman", tip: "commesso = 男店员 / commessa = 女店员", prop: "shirt", color: "#f8e1e4" },
+      { prompt: "Luca lavora in un ristorante.\nCucina tutti i giorni. Quindi è...", options: ["un cameriere", "un cuoco", "un infermiere"], answer: 1, job: "cuoco", character: "man", tip: "cuoco = 男厨师 / cuoca = 女厨师", prop: "pan", color: "#e6ecfa" },
+      { prompt: "Sofia lavora in un salone di parrucchiere.\nQuindi è...", options: ["una parrucchiera", "un’estetista", "una commessa"], answer: 0, job: "parrucchiera", character: "woman", tip: "parrucchiere = 男理发师 / parrucchiera = 女理发师", prop: "scissors", color: "#efe2f5" },
+      { prompt: "Marco lavora in un ospedale.\nAiuta i pazienti. Quindi è...", options: ["un infermiere", "un impiegato", "un cuoco"], answer: 0, job: "infermiere", character: "man", tip: "infermiere = 男护士 / infermiera = 女护士", prop: "cross", color: "#dff1ed" },
+      { prompt: "Laura lavora in una scuola.\nInsegna italiano. Quindi è...", options: ["una studentessa", "un’insegnante", "una cameriera"], answer: 1, job: "insegnante", character: "woman", tip: "insegnante 可指男老师或女老师", prop: "book", color: "#fff0c9" },
+      { prompt: "Paolo lavora in ufficio.\nQuindi è...", options: ["un impiegato", "un operaio", "un parrucchiere"], answer: 0, job: "impiegato", character: "man", tip: "impiegato = 男职员 / impiegata = 女职员", prop: "laptop", color: "#dfe9f5" },
+      { prompt: "Chiara lavora in un centro estetico.\nQuindi è...", options: ["un’infermiera", "un’estetista", "una cuoca"], answer: 1, job: "estetista", character: "woman", tip: "estetista 可指男美容师或女美容师", prop: "bottle", color: "#f9e1ea" },
+      { prompt: "Davide lavora in un bar.\nPorta da bere ai clienti. Quindi è...", options: ["un cameriere", "un insegnante", "un operaio"], answer: 0, job: "cameriere", character: "man", tip: "cameriere = 男服务员 / cameriera = 女服务员", prop: "tray", color: "#e2f0de" }
     ]
   },
   {
@@ -86,13 +86,32 @@ function illustration(question, index) {
   const skin = ["#e6ad83", "#b97851", "#f0bd91", "#8d5d42"][index % 4];
   const hair = ["#49372f", "#2f2b29", "#a66b39", "#563b2d"][index % 4];
   const shirt = ["#4d8b71", "#5679a6", "#d77961", "#806a9c"][index % 4];
+  const isWoman = question.character === "woman";
+  const hairBack = isWoman
+    ? [
+        `<path d="M20 45q-1-34 27-34t27 34v27q-8 7-18 4l-9-17-9 17q-11 3-18-4z" fill="${hair}"/>`,
+        `<circle cx="72" cy="35" r="13" fill="${hair}"/><path d="M21 45q0-33 26-33 25 0 26 33l-5 18q-9 7-16-2H41q-8 9-17 2z" fill="${hair}"/>`,
+        `<path d="M19 46q0-34 28-34t28 34q0 22-12 29l-9-14H40l-9 14Q19 68 19 46z" fill="${hair}"/>`
+      ][Math.floor(index / 2) % 3]
+    : "";
+  const frontHair = isWoman
+    ? `<path d="M23 42q0-29 25-29 21 1 24 25-12-2-18-13-9 12-31 17z" fill="${hair}"/>`
+    : [
+        `<path d="M23 40q1-27 25-27 21 0 24 24-10 1-17-10-11 9-32 13z" fill="${hair}"/>`,
+        `<path d="M23 39q2-27 25-27 24 0 24 28-8-8-17-12-13 7-32 11z" fill="${hair}"/>`,
+        `<path d="M24 38q2-25 24-25 22 0 24 24-12-5-20-11-10 8-28 12z" fill="${hair}"/>`
+      ][Math.floor(index / 2) % 3];
+  const outfit = isWoman
+    ? `<path d="M12 111q4-37 35-37t35 37" fill="${shirt}"/><path d="M36 77q11 14 22 0" fill="none" stroke="#fff" stroke-opacity=".7" stroke-width="3"/>`
+    : `<path d="M10 111q5-37 37-37t37 37" fill="${shirt}"/><path d="M34 77l13 12 13-12M47 89v22" fill="none" stroke="#fff" stroke-opacity=".72" stroke-width="3"/>`;
   return `<div class="illustration" style="--illustration-bg:${question.color}" role="img" aria-label="Illustrazione: ${escapeHtml(question.job)}">
     <svg viewBox="0 0 140 115" aria-hidden="true" focusable="false">
       <circle cx="34" cy="22" r="15" fill="#fff" opacity=".55"/><circle cx="122" cy="95" r="24" fill="#fff" opacity=".4"/>
-      <path d="M12 111q4-37 35-37t35 37" fill="${shirt}"/>
+      ${hairBack}
+      ${outfit}
       <rect x="40" y="62" width="14" height="19" rx="6" fill="${skin}"/>
       <circle cx="47" cy="44" r="25" fill="${skin}"/>
-      <path d="M23 44q0-30 25-30 26 1 24 31-10-6-13-19-11 14-36 18z" fill="${hair}"/>
+      ${frontHair}
       <circle cx="38" cy="46" r="2" fill="#3d322d"/><circle cx="56" cy="46" r="2" fill="#3d322d"/>
       <path d="M41 56q6 5 12 0" fill="none" stroke="#9c5a50" stroke-width="2" stroke-linecap="round"/>
       ${propSvg(question.prop)}
